@@ -1,0 +1,2 @@
+#requirements to run main.py
+#run (pip install -r requirements.txt) before running program 

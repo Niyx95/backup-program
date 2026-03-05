@@ -1,0 +1,6 @@
+BackupClient.json
+token.json
+*.json
+__pycache__/
+*.pyc
+.env
