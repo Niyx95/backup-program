@@ -35,19 +35,18 @@ def check_destination():
 
 #copy and compress chosen dir for backup
 def copy_and_compress(source, destination):
-    try:
-    #set time and date and create tar file
-        date = datetime.now()
-        name = destination / f'Your back-up has been created on: {date}'
 
-        archive = shutil.make_archive(base_name=str(name),
+    #set time and date and create tar file
+    date = datetime.now()
+    name = destination / f'Your back-up has been created on: {date}'
+
+    archive = shutil.make_archive(base_name=str(name),
                                       format='gztar',
                                       root_dir=str(source.parent),
                                       base_dir=source.name)
-        return archive
+    return archive
 
-    except Exception as error:
-        print(f'sorry, an {error} occurred')
+    
 
 #function to save the backup to Google Cloud service
 def cloud(backup):
@@ -86,7 +85,7 @@ def cloud(backup):
              }
            ]
 
-         #exeute the batch update
+        #exeute the batch update
         result = service.documents().batchUpdate(
                documentId=DOCUMENT_ID, body={'requests': requests}).execute()
         #print
