@@ -26,5 +26,5 @@ follow the prompts. Maybe you need to change the shebang on line 1 in main.py, t
 - A Google Docs API credentials file (BackupClient.json)
 
 ## Soon
--Google Drive integration to save your file directly to the cloud.
+- Google Drive integration to save your file directly to the cloud.
 
